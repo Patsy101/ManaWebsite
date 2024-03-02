@@ -80,7 +80,11 @@
   ],
   
   "Testimonials": [
-
+    {
+      "img": "img/CustomerReview9.jpg",
+      "text": "Cosy and wholesome food. Good portion size, we shared an entree and had a main each and were very full afterwards. Will come back to try more of the menu. Service is a little slow as they were quite busy for dinner time",
+      "name": "Tracy Huynh"
+    },
     {
       "img": "img/CustomerReview8.jpg",
       "text": "It's an amazing experience. It's a very wonderful and friendly atmosphere. Wonderful food and service. The lively atmosphere, pleasant service, and excellent Filipino food recommendations are all present. This place is awesome! It's evident that maintaining happy customers is their main priority. The cuisine is superb and well worth the price, including both modern and traditional Filipino meals. Highly recommended",
