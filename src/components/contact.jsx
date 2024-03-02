@@ -290,7 +290,7 @@ export const Contact = (props) => {
             <div className="contact-item">
               <p>
                 <span>
-                  <i className="fa fa-envelope-o"></i> Opening Hours
+                  <i className="fa fa-envelope-o"></i> Opening Days & Hours
                 </span>{" "}
                 {props.data ? (
       <a href={props.data.openingHoursLink ? props.data.openingHoursLink : "#"} target="_blank" rel="noopener noreferrer">
