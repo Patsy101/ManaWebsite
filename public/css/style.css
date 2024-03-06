@@ -243,7 +243,7 @@ a:focus,
   padding: 0;
 
   /* Specify multiple background images separated by commas */
-  background: url('../img/FoodAI.jpg') center repeat ;
+  background: url('../img/mainlogo.png') center repeat ;
   background-color: rgb(255, 255, 255);
   -webkit-background-size: cover;
   -moz-background-size: cover;

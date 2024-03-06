@@ -7,10 +7,10 @@ export const Gallery = (props) => {
       <div className="container">
         <div className="section-title">
           <h2>Restaurant Menu</h2>
-          {/* <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
-          </p> */}
+          {/* Make the "Here" clickable */}
+          <p>
+           Manna Kitchen Ormiston Full Menu Available <a href="https://form.jotform.com/240647087159868">Here.</a>
+          </p>
         </div>
         <div className="row">
           <div className="portfolio-items">

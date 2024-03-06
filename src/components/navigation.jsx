@@ -40,11 +40,11 @@ export const Navigation = (props) => {
                 About
               </a>
             </li> */}
-            {/* <li>
-              <a href="#services" className="page-scroll">
-                Services
+            <li>
+              <a href="https://www.doordash.com/store/manna-kitchen-auckland-27642015/?event_type=autocomplete&pickup=false" className="page-scroll">
+               Order Now
               </a>
-            </li> */}
+            </li>
             
             <li>
               <a href="#portfolio" className="page-scroll">

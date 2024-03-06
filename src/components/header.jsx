@@ -1,74 +1,56 @@
 import React, { useEffect, useState } from "react";
+import mainLogo1 from "../img/Manna Kitchen Logo.png";
+import mainLogo2 from "../img/Manna Kitchen Logo.png";
+import mainLogo3 from "../img/Manna Kitchen Logo.png";
 
 export const Header = (props) => {
-  const [text, setText] = useState("");
-  const [fontSize, setFontSize] = useState('5rem'); // Default font size
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [mainLogo1, mainLogo2, mainLogo3];
 
   useEffect(() => {
-    const welcomeText = " Welcome to Manna Kitchen Ormiston";
-
-    // Typewriter effect
-    let index = 0;
     const intervalId = setInterval(() => {
-      setText((prevText) => prevText + welcomeText[index]);
-      index++;
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds (5000 milliseconds)
 
-      if (index === welcomeText.length) {
-        clearInterval(intervalId);
-      }
-    }, 70); // Adjust the typing speed as needed
-
-    return () => {
-      clearInterval(intervalId);
-    };
+    return () => clearInterval(intervalId);
   }, []);
-
-  const handleFontSizeChange = (newSize) => {
-    setFontSize(newSize);
-  };
 
   return (
     <header id="header">
-      <div className="intro">
+      <div className="intro" style={{ backgroundImage: `url(${images[currentImageIndex]})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', backgroundColor: 'rgb(255, 255, 255)', height: '6rem' }}>
         <div className="overlay">
           <div className="container">
             <div className="row">
-              <div className="col-md-8 col-md-offset-2 intro-text" style={{ position: 'relative', textAlign: 'center' }}>
-                <h1 style={{ fontSize: fontSize }}>
-                  {text.toLowerCase()} {/* Display small letters */}
-                  <span></span>
-                </h1>
-                <p style={{ fontSize: fontSize }}>
+              <div className="col-md-8 col-md-offset-2 intro-text" style={{ position: 'relative', textAlign: 'center', marginTop: '2rem', marginBottom: '2rem' }}>
+                {/* Removed the h1 element */}
+                <p style={{ fontSize: '10rem' }}>
                   {props.data ? props.data.paragraph : "Loading"}
                 </p>
 
+                <div className="button-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '2rem' }}>
                 <a
-  href="#Contact"
-  className="btn btn-custom btn-lg page-scroll shining-button"
-  style={{
-    position: 'absolute',
-    top: '80%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)'
-  }}
->
-  Contact Us/Reservation
-</a>
+                    href="https://www.doordash.com/store/manna-kitchen-auckland-27642015/?event_type=autocomplete&pickup=false"
+                    className="btn btn-custom btn-lg page-scroll shining-button box-style"
+                    style={{ marginBottom: '1rem' }}
+                  >
+                    Order Now
+                  </a>
+                  <a
+                    href="#Contact"
+                    className="btn btn-custom btn-lg page-scroll shining-button box-style"
+                    style={{ marginBottom: '1rem' }}
+                  >
+                    Contact Us/Reservation
+                  </a>
 
-{/* Add the "Order Now" button */}
-<a
-  href="https://www.doordash.com/store/manna-kitchen-auckland-27642015/?event_type=autocomplete&pickup=false"
-  className="btn btn-custom btn-lg page-scroll shining-button"
-  style={{
-    position: 'absolute',
-    top: '90%',  // Adjust the vertical position as needed
-    left: '50%',
-    transform: 'translate(-50%, -50%)'
-  }}
->
-  Order Now
-</a>
-
+                  <a
+                    href="#portfolio"
+                    className="btn btn-custom btn-lg page-scroll shining-button box-style"
+                    style={{ marginBottom: '10rem' }}
+                  >
+                    Restaurant Menu
+                  </a>
+                </div>
 
                 <script src="//code.tidio.co/pyrul9dl4isngp3ftlgvakecwuj8uxk0.js" async></script>
               </div>
